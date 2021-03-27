@@ -52,7 +52,7 @@
       iii <- which((3<= p$pH)&(p$pH<=3.5))
       z<- p[iii,]
     }
-    # check how python script choses window. 
+    # check how python script chooses window. 
     
     options(digits=9)
     
@@ -64,7 +64,7 @@
     F1<-(m0+m)*exp((z$E/1000)/(R*(z$Tk)/F))
     f<-lm(m~F1)
     TA<-f$coefficients[1]*C/m0[1]
-    ### differences -  doesnt utilise coefficient p2. is poly1 linear?
+    ### differences -  doesnt utilise coefficient p2?
     
     #non linear estimation:
     E0 <- z$E/1000-(R*z$Tk/F)*log((-m0*TA+m*C)/(m0+m))
